@@ -7,21 +7,23 @@
 <body>
 	<h1>MEGA-SENA CHECKER</h1>
 	<p>Please insert the bet numbers below or upload a CSV file with the chosen numbers</p>
-	<table>
-		<?php 
-			for ($i=1; $i <= 60; $i++) { 
-				if ($i % 10 == 1) 
-				{ ?>
-				<tr>
-					<td><?=$i?></td>
-				<?php } else if ($i % 10 == 0){ ?>
-				<td><?=$i?></td></tr>
-				<?php } else { ?>
-					<td><?=$i?></td>
-				<?php }
-
-		} ?>
-	</table>
+	<form action="#">
+		<table>
+			<?php 
+				for ($i=1; $i <= 60; $i++) { 
+					if ($i % 10 == 1) 
+					{ ?>
+					<tr>
+						<td><input type="checkbox" id="cell<?=$i?>" name="cell<?=$i?>"><?=$i?></td>
+					<?php } else if ($i % 10 == 0){ ?>
+					<td><input type="checkbox" id="cell<?=$i?>" name="cell<?=$i?>"><?=$i?></td></tr>
+					<?php } else { ?>
+						<td><input type="checkbox" id="cell<?=$i?>" name="cell<?=$i?>"><?=$i?></td>
+					<?php }
+			} ?>
+		</table>
+		<button type="submit">SUBMIT</button>
+	</form>
 
 </body>
 </html>
