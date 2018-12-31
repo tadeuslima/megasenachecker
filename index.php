@@ -39,8 +39,18 @@
 
 		<h1>UPLOAD A CSV FILE</h1>
 		<form action="formhandler.php" method="POST" enctype="multipart/form-data">
-			<input type="file" name="numbers" accept=".csv">
+			<input type="file" name="numbers" accept=".csv"><br>
+			Drawn numbers
+			<ul style="list-style: none;">
+				<li style="float: left"><input type="number" name="drawn1" min="1" max="60" required></li>
+				<li style="float: left"><input type="number" name="drawn2" min="1" max="60" required></li>
+				<li style="float: left"><input type="number" name="drawn3" min="1" max="60" required></li>
+				<li style="float: left"><input type="number" name="drawn4" min="1" max="60" required></li>
+				<li style="float: left"><input type="number" name="drawn5" min="1" max="60" required></li>
+				<li style="float: left"><input type="number" name="drawn6" min="1" max="60" required></li>
+			</ul>
 			<button type="submit">UPLOAD FILE</button>
+
 		</form>
 
 	</body>
